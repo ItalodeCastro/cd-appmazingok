@@ -1,6 +1,6 @@
 package com.campusdual.appmazing.model.dto;
 
-public class Customerdto {
+public class CustomerDto {
         private int id;
 
         private String name;

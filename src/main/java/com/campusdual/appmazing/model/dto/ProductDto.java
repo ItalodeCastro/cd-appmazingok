@@ -3,7 +3,7 @@ package com.campusdual.appmazing.model.dto;
 import java.math.BigDecimal;
 import java.util.Date;
 
-public class Productdto {
+public class ProductDto {
         private int id;
 
         private String name;
