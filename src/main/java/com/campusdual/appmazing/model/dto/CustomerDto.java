@@ -11,7 +11,7 @@ public class CustomerDto {
 
         private String email;
 
-        private String phone;
+        private String phone_Number;
 
         public int getId() {
             return id;
@@ -53,11 +53,11 @@ public class CustomerDto {
             this.email = email;
         }
 
-        public String getPhone() {
-            return phone;
+        public String getPhone_Number() {
+            return phone_Number;
         }
 
-        public void setPhone(String phone) {
-            this.phone = phone;
+        public void setPhone_Number(String phone_Number) {
+            this.phone_Number = phone_Number;
         }
     }
