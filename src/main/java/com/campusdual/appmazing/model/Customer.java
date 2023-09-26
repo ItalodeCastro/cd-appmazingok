@@ -17,7 +17,7 @@ public class Customer {
     @Column
     private String email;
     @Column
-    private String phoneNumber;
+    private String phone;
 
     public int getId() {
         return id;
@@ -35,19 +35,19 @@ public class Customer {
         this.name = name;
     }
 
-    public String getSurname1() {
+    public String getSurname_1() {
         return surname_1;
     }
 
-    public void setSurname1(String surname1) {
+    public void setSurname_1(String surname1) {
         this.surname_1 = surname1;
     }
 
-    public String getSurname2() {
+    public String getSurname_2() {
         return surname_2;
     }
 
-    public void setSurname2(String surname2) {
+    public void setSurname_2(String surname2) {
         this.surname_2 = surname2;
     }
 
@@ -59,11 +59,11 @@ public class Customer {
         this.email = email;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 }
