@@ -2,11 +2,9 @@ package com.campusdual.appmazing.service;
 
 import com.campusdual.appmazing.api.iCustomerService;
 import com.campusdual.appmazing.model.Customer;
-import com.campusdual.appmazing.model.Product;
 import com.campusdual.appmazing.model.dao.CustomerDao;
 import com.campusdual.appmazing.model.dto.CustomerDto;
-import com.campusdual.appmazing.model.dto.dtocmapper.CustomerMapper;
-import com.campusdual.appmazing.model.dto.dtopmapper.ProductMapper;
+import com.campusdual.appmazing.model.dto.dtomapper.CustomerMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;

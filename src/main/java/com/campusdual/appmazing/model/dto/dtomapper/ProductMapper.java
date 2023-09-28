@@ -1,4 +1,4 @@
-package com.campusdual.appmazing.model.dto.dtopmapper;
+package com.campusdual.appmazing.model.dto.dtomapper;
 
 import com.campusdual.appmazing.model.Product;
 import com.campusdual.appmazing.model.dto.ProductDto;
