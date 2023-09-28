@@ -26,14 +26,28 @@ public class ProductController {
     }
 
     @PostMapping(value = "/get")
-    public ProductDto queryProduct(@RequestBody ProductDto product){
+        public ProductDto queryProduct(@RequestBody ProductDto product){
         return this.productService.queryProduct(product);
         }
     @GetMapping(value ="/getAll")
         public List<ProductDto> queryALLProducts(){
         return this.productService.queryAllProducts();
         }
+
+    @PostMapping(value = "/add")
+        public int insertProduct(@RequestBody ProductDto product){
+        return this.productService.insertProduct(product);
+        }
+    @PutMapping(value = "/update")
+        public int productUpdate(@RequestBody ProductDto product){
+        return this.productService.updateProduct(product);
     }
+
+    @DeleteMapping(value = "/delete")
+    public int productDelete(@RequestBody ProductDto product){
+        return this.productService.deleteProduct(product);
+    }
+}
 //El controlador afecta a "/products", tras añadir esa etiqueta en la ruta, debemos añadir a mayores el siguiente metodo
 //que queramos utilizar y comprobar si es tipo Post, Get etc, aplicando si necesita o no de un Body. Hacen referencia
 //a los métodos de la clase ProductService mediante la interfaz de ProductService.
