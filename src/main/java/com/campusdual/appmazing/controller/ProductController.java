@@ -34,3 +34,6 @@ public class ProductController {
         return this.productService.queryAllProducts();
         }
     }
+//El controlador afecta a "/products", tras añadir esa etiqueta en la ruta, debemos añadir a mayores el siguiente metodo
+//que queramos utilizar y comprobar si es tipo Post, Get etc, aplicando si necesita o no de un Body. Hacen referencia
+//a los métodos de la clase ProductService mediante la interfaz de ProductService.
