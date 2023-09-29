@@ -20,6 +20,9 @@ private BigDecimal price;
 private boolean active;
     @Column
 private Date date_added;
+@ManyToOne //Porque más de un elemento pueden tener mismo Foreign Key
+@JoinColumn(name = "category") //Nombre de la Columna de la BD
+private Category category;
 
     public int getId() {
         return id;
@@ -67,5 +70,13 @@ private Date date_added;
 
     public void setDate_added(Date date_added) {
         this.date_added = date_added;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
     }
 }
