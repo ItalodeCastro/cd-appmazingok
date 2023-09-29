@@ -1,5 +1,7 @@
 package com.campusdual.appmazing.model;
 
+import com.campusdual.appmazing.model.dto.CategoryDto;
+
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Date;
@@ -22,7 +24,7 @@ private boolean active;
 private Date date_added;
 @ManyToOne //Porque más de un elemento pueden tener mismo Foreign Key
 @JoinColumn(name = "category") //Nombre de la Columna de la BD
-private Category category;
+private CategoryDto category;
 
     public int getId() {
         return id;
@@ -72,11 +74,11 @@ private Category category;
         this.date_added = date_added;
     }
 
-    public Category getCategory() {
+    public CategoryDto getCategory() {
         return category;
     }
 
-    public void setCategory(Category category) {
+    public void setCategory(CategoryDto category) {
         this.category = category;
     }
 }

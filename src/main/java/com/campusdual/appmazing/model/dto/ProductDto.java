@@ -18,7 +18,7 @@ public class ProductDto {
 
         private Date date_added;
 
-        private Category category;
+        private CategoryDto category;
 
         public int getId() {
             return id;
@@ -68,11 +68,11 @@ public class ProductDto {
             this.date_added = date_added;
         }
 
-    public Category getCategory() {
+    public CategoryDto getCategory() {
         return category;
     }
 
-    public void setCategory(Category category) {
+    public void setCategory(CategoryDto category) {
         this.category = category;
     }
 }
