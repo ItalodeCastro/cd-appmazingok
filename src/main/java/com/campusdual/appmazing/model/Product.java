@@ -24,7 +24,7 @@ private boolean active;
 private Date date_added;
 @ManyToOne //Porque más de un elemento pueden tener mismo Foreign Key
 @JoinColumn(name = "category") //Nombre de la Columna de la BD
-private CategoryDto category;
+private Category category;
 
     public int getId() {
         return id;
@@ -74,11 +74,11 @@ private CategoryDto category;
         this.date_added = date_added;
     }
 
-    public CategoryDto getCategory() {
+    public Category getCategory() {
         return category;
     }
 
-    public void setCategory(CategoryDto category) {
+    public void setCategory(Category category) {
         this.category = category;
     }
 }
