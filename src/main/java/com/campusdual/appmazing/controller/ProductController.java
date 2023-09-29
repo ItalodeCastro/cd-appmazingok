@@ -21,8 +21,7 @@ public class ProductController {
         return ("Product controller method Post works " + name);
     }
     @GetMapping(value = "/testMethod")
-        public String testControllerMethod(){
-        return "Product Controller Method works!" ;
+        public String testControllerMethod(){ return "Product Controller Method works!" ;
     }
 
     @PostMapping(value = "/get")
