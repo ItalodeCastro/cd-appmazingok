@@ -5,6 +5,7 @@ import com.campusdual.appmazing.model.dto.ProductDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @RestController
@@ -46,6 +47,15 @@ public class ProductController {
     public int productDelete(@RequestBody ProductDto product){
         return this.productService.deleteProduct(product);
     }
+
+    @PutMapping(value= "/buy")
+    public int buyProduct(@RequestBody ProductDto productDTO) {
+        return this.productService.buyProduct(productDTO,5);
+    }
+    /*@PostMapping(value = "/price")
+    public BigDecimal totalPrice(@RequestBody ProductDto productDto){
+        return this.productService.totalPrice();
+    }*/
 }
 //El controlador afecta a "/products", tras añadir esa etiqueta en la ruta, debemos añadir a mayores el siguiente metodo
 //que queramos utilizar y comprobar si es tipo Post, Get etc, aplicando si necesita o no de un Body. Hacen referencia
