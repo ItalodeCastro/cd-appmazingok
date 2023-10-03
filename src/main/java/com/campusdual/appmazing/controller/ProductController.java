@@ -55,7 +55,22 @@ public class ProductController {
     /*@PostMapping(value = "/price")
     public BigDecimal totalPrice(@RequestBody ProductDto productDto){
         return this.productService.totalPrice();
-    }*/
+    }
+
+      @PostMapping(value= "/buy5")
+    public int buyProduct5(@RequestBody ProductDTO productDTO) {
+        int quantity = 5;
+        return this.productService.buyProduct(productDTO,quantity);
+    }
+
+    @PostMapping(value= "/buy")
+    public int buyProduct(@RequestBody Map<String, Integer> body) {
+        int quantity = body.get("quantity");
+        ProductDTO productDTO = new ProductDTO();
+        productDTO.setId(body.get("id"));
+        return this.productService.buyProduct(productDTO,quantity);
+    }
+     */
 }
 //El controlador afecta a "/products", tras añadir esa etiqueta en la ruta, debemos añadir a mayores el siguiente metodo
 //que queramos utilizar y comprobar si es tipo Post, Get etc, aplicando si necesita o no de un Body. Hacen referencia
